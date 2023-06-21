@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/adsInstructorsFragment"
+        android:title="@string/oglasi_tab"
+        android:icon="@drawable/ic_ad" />
+
+    <item
+        android:id="@+id/ratingsFragment"
+        android:title="@string/ocijene_tab"
+        android:icon="@drawable/ic_rating"/>
+
+    <item
+        android:id="@+id/messagesFragment"
+        android:title="@string/poruke_tab"
+        android:icon="@drawable/ic_message"/>
+
+    <item
+        android:id="@+id/calendarFragment"
+        android:title="@string/predavanja_tab"
+        android:icon="@drawable/ic_calendar"/>
+
+    <item
+        android:id="@+id/profileFragment"
+        android:title="@string/profil_tab"
+        android:icon="@drawable/ic_profile"/>
+</menu>

@@ -1,0 +1,42 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Instrukcije" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/status_bar</item>
+        <item name="colorPrimaryVariant">@color/status_bar</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+    <style name="CheckBoxTheme">
+        <item name="colorAccent">@color/secondary_color</item>
+        <item name="colorControlNormal">@color/white</item>
+    </style>
+
+    <style name="FloatingButton">
+        <item name="android:backgroundTint">@color/secondary_color</item>
+        <item name="iconTint">@color/white</item>
+    </style>
+
+    <style name="RatingStars" parent="Widget.AppCompat.RatingBar.Small">
+        <item name="android:progressTint">@color/secondary_color</item>
+        <item name="android:progressBackgroundTint">@color/gray</item>
+    </style>
+    <style name="Rating" parent="Widget.AppCompat.RatingBar">
+        <item name="android:progressTint">@color/secondary_color</item>
+        <item name="android:progressBackgroundTint">@color/light_gray</item>
+    </style>
+
+    <style name="AvailableSwitch" parent="Theme.AppCompat.Light">
+        <item name="android:colorControlActivated">@color/secondary_color</item>
+    </style>
+
+</resources>

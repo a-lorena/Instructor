@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatGroupActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/chatHeaderInstructor"
+        app:title="@string/chat_name"
+        app:subtitle="Studenti"
+        app:titleTextColor="@color/white"
+        app:subtitleTextColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/primary_color"
+        app:menu="@menu/group_chat_header_menu"
+        android:visibility="invisible">
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/chatHeaderStudent"
+        app:title="@string/chat_name"
+        app:subtitle="Studenti"
+        app:titleTextColor="@color/white"
+        app:subtitleTextColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/primary_color"
+        android:visibility="invisible"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/singleChatContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/chatHeaderInstructor"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintBottom_toTopOf="@id/newMessageContainer">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/singleChatRecycler"
+            android:background="@color/white"
+            android:scrollbars="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:backgroundTint="@color/light_gray"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/newMessageContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/singleChatContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/writeNewMessage"
+            android:hint="Napišite poruku..."
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/sendNewMessageButton"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="@color/secondary_color"/>
+
+        <ImageButton
+            android:id="@+id/sendNewMessageButton"
+            android:src="@drawable/ic_send_message"
+            android:backgroundTint="@color/primary_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/writeNewMessage"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

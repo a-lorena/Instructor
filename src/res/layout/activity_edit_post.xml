@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditPostActivity">
+
+    <EditText
+        android:id="@+id/editPostTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_post_title"
+        android:background="@drawable/custom_input"
+        android:padding="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="100dp"
+        android:layout_marginHorizontal="50dp"
+        android:paddingHorizontal="15dp"/>
+
+    <EditText
+        android:id="@+id/editPostDescription"
+        android:hint="@string/edit_description"
+        android:background="@drawable/custom_input"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/editPostTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="50dp"
+        android:paddingHorizontal="15dp"
+        android:maxLines="10"
+        android:scrollbars="vertical"/>
+
+    <TextView
+        android:id="@+id/checkText"
+        android:text="@string/education_level"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/editPostDescription"
+        app:layout_constraintStart_toStartOf="@id/editPostDescription"
+        android:layout_marginTop="20dp"/>
+
+    <RadioGroup
+        android:id="@+id/adLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/checkText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/osnovnaRadio"
+            android:text="@string/osnovna"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:onClick="checkLevel"
+            android:buttonTint="@color/secondary_color" />
+
+        <RadioButton
+            android:id="@+id/srednjaRadio"
+            android:text="@string/srednja"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:onClick="checkLevel"
+            android:buttonTint="@color/secondary_color"/>
+
+        <RadioButton
+            android:id="@+id/fakultetRadio"
+            android:text="@string/fakultet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:onClick="checkLevel"
+            android:buttonTint="@color/secondary_color"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/savePostEdit"
+        android:text="@string/save_edit_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/adLevel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginVertical="40dp"
+        android:padding="10dp"
+        android:background="@drawable/custom_rounded_button"
+        android:textColor="@color/white"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

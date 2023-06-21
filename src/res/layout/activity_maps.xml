@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapsActivity">
+
+    <fragment
+        android:id="@+id/googleMap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+    <EditText
+        android:id="@+id/inputField"
+        android:hint="@string/search_location"
+        android:background="@drawable/custom_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        map:layout_constraintTop_toTopOf="parent"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintEnd_toStartOf="@id/searchLocationButton"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"/>
+
+    <ImageButton
+        android:id="@+id/searchLocationButton"
+        android:src="@drawable/ic_search_location"
+        android:background="@drawable/custom_map_buttons"
+        android:backgroundTint="@color/primary_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        map:layout_constraintTop_toTopOf="@id/inputField"
+        map:layout_constraintBottom_toBottomOf="@id/inputField"
+        map:layout_constraintStart_toEndOf="@id/inputField"
+        map:layout_constraintEnd_toStartOf="@id/saveLocationButton"
+        android:padding="10dp"
+        android:layout_marginHorizontal="10dp"/>
+
+    <ImageButton
+        android:id="@+id/saveLocationButton"
+        android:src="@drawable/ic_done"
+        android:background="@drawable/custom_map_buttons"
+        android:backgroundTint="@color/done_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        map:layout_constraintTop_toTopOf="@id/inputField"
+        map:layout_constraintBottom_toBottomOf="@id/inputField"
+        map:layout_constraintStart_toEndOf="@id/searchLocationButton"
+        map:layout_constraintEnd_toEndOf="parent"
+        android:padding="10dp"
+        android:layout_marginEnd="20dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

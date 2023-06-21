@@ -1,0 +1,142 @@
+<resources>
+    <string name="app_name">Instrukcije</string>
+    <string name="login_title">Instrukcije</string>
+
+    <!-- LOGIN STRINGS -->
+    <string name="enter_username">E-mail</string>
+    <string name="enter_password">Lozinka</string>
+    <string name="login_button">PRIJAVA</string>
+    <string name="link_to_registration"><u>Registracija</u></string>
+
+    <!-- REGISTRATION STRINGS -->
+    <string name="registration_title">Registracija</string>
+    <string name="register_full_name">Ime i prezime</string>
+    <string name="register_email">E-mail</string>
+    <string name="register_password">Lozinka</string>
+    <string name="repeat_password">Ponovite lozinku</string>
+    <string name="radio_button_student">Učenik</string>
+    <string name="radio_button_teacher">Instruktor</string>
+    <string name="register_button">REGISTRIRAJ ME</string>
+
+    <!-- BOTTOM NAVIGATION -->
+    <string name="oglasi_tab">Oglasi</string>
+    <string name="poruke_tab">Poruke</string>
+    <string name="predavanja_tab">Predavanja</string>
+    <string name="profil_tab">Profil</string>
+    <string name="instruktori_tab">Instruktori</string>
+    <string name="ocijene_tab">Ocjene</string>
+
+    <!-- PROFILE FRAGMENT -->
+    <string name="full_name_profile">Ime</string>
+    <string name="education_profile">Obrazovanje</string>
+    <string name="subjects_profile">Predmeti</string>
+    <string name="settings_profile">POSTAVKE</string>
+    <string name="logout_profile">ODJAVA</string>
+
+    <!-- SETTINGS STRINGS -->
+    <string name="deactivate_user_button">Deaktiviraj</string>
+    <string name="full_name_change">Ime i prezime</string>
+    <string name="email_change">E-mail</string>
+    <string name="education_change">Obrazovanje</string>
+    <string name="subjects_change">Predmeti</string>
+    <string name="price_change">Cijena</string>
+    <string name="available_change">Dostupan</string>
+    <string name="save_changes">Spremi</string>
+
+    <!-- OGLASI INSTRUKTORI FRAGMENT -->
+    <string name="search_post_by_title">Upišite naziv predmeta (npr. Matematika)</string>
+
+    <!-- INSTRUKTORI FRAGMENT -->
+    <string name="fast_search">Brza pretraga</string>
+    <string name="filter_by_subject">Predmet</string>
+    <string-array name="choose_level">
+        <item>Sve razine</item>
+        <item>Osnovna škola</item>
+        <item>Srednja škola</item>
+        <item>Fakultet</item>
+    </string-array>
+    <string-array name="choose_rating">
+        <item>Sve ocijene</item>
+        <item>5</item>
+        <item>4</item>
+        <item>3</item>
+        <item>2</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="choose_order">
+        <item>Ocjene silazno</item>
+        <item>Ocjene uzlazno</item>
+        <item>Cijena silazno</item>
+        <item>Cijena uzlazno</item>
+    </string-array>
+    <string name="available_checkbox">Dostupni</string>
+    <string name="filter_button">Filtriraj</string>
+    <string name="detail_filter_open">Detaljna pretraga</string>
+    <string name="detail_filter_close">Zatvori</string>
+
+    <!-- POST CARD -->
+    <string name="post_title">Predmet</string>
+    <string name="post_username">Korisnik</string>
+    <string name="post_level">Razina obrazovanja</string>
+    <string name="post_description">Opis</string>
+    <string name="send_message_to_student">Poruka</string>
+    <string name="edit_post_button">Uredi</string>
+    <string name="delete_post_button">Izbriši</string>
+
+    <!-- NEW POST -->
+    <string name="input_post_title">Predmet</string>
+    <string name="input_description">Gradivo</string>
+    <string name="post_button">Objavi</string>
+
+    <!-- EDIT POST -->
+    <string name="edit_post_title">Predmet</string>
+    <string name="edit_description">Gradivo</string>
+    <string name="save_edit_button">Spremi</string>
+
+    <!-- INSTRUKTOR CARD -->
+    <string name="instruktor_name">Ime i prezime</string>
+    <string name="instruktor_education">Obrazovanje</string>
+    <string name="instruktor_subjects">Predmeti</string>
+    <string name="instruktor_price">Cijena</string>
+    <string name="instruktor_rating">Ocjena</string>
+    <string name="rate_button">Ocjene</string>
+    <string name="send_message_button">Poruka</string>
+
+    <!-- NEW RATING DIALOG -->
+    <string name="rating_comment_hint">Unesite komentar...</string>
+    <string name="cancel_rating">Odustani</string>
+    <string name="save_rating_comment">Objavi</string>
+    <string-array name="choose_date">
+        <item>Ocjene silazno</item>
+        <item>Ocjene uzlazno</item>
+        <item>Najnovije prvo</item>
+        <item>Najstarije prvo</item>
+    </string-array>
+
+    <!-- RATING CARD -->
+    <string name="rating_student_name">Ime Prezime</string>
+    <integer name="rating_stars">3</integer>
+    <string name="rating_comment">Komentar</string>
+    <string name="rating_date">DD.MM.GGGG</string>
+
+    <!-- NEW EVENT ACTIVITY -->
+    <string name="input_event_title">Predmet</string>
+    <string name="input_event_teacher">Instruktor</string>
+    <string name="input_event_date">Datum</string>
+    <string name="input_event_time">Vrijeme</string>
+    <string name="save_event_button">Spremi</string>
+
+    <!-- EVENT CARD -->
+    <string name="event_title">Predmet</string>
+    <string name="event_teacher">Instruktor</string>
+    <string name="event_date">Datum</string>
+    <string name="event_time">Vrijeme</string>
+    <string name="event_delete_button">Obriši</string>
+    <string name="event_done_button">Obavljeno</string>
+
+    <!-- CHAT ACTIVITY -->
+    <string name="chat_name">Ime Prezime</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">Map</string>
+</resources>

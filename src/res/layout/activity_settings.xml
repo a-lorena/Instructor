@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray"
+    android:fillViewport="true">
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".SettingsActivity">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/settingsHeader"
+            app:title="Postavke"
+            app:titleTextColor="@color/white"
+            android:background="@color/primary_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <ImageButton
+            android:id="@+id/changeTheme"
+            android:src="@drawable/ic_night_mode"
+            android:background="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/settingsHeader"
+            app:layout_constraintStart_toStartOf="@id/editFullName"
+            tools:ignore="UseSwitchCompatOrMaterialXml"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="50dp"
+            app:tint="@color/black" />
+
+        <Button
+            android:id="@+id/saveChangesButton"
+            android:text="@string/save_changes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/availableChange"
+            android:padding="10dp"
+            android:textAllCaps="false"
+            android:layout_marginHorizontal="120dp"
+            android:backgroundTint="@color/done_button"
+            android:background="@drawable/custom_rounded_button"
+            android:textColor="@color/white"/>
+
+        <EditText
+            android:id="@+id/editFullName"
+            android:hint="@string/full_name_change"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:textSize="15sp"
+            android:layout_marginTop="100dp"
+            android:paddingHorizontal="15dp"
+            android:background="@drawable/custom_input"
+            android:backgroundTint="@color/white"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/settingsHeader" />
+
+        <EditText
+            android:id="@+id/editEmail"
+            android:hint="@string/email_change"
+            android:textSize="15sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginVertical="20dp"
+            android:paddingHorizontal="15dp"
+            android:background="@drawable/custom_input"
+            android:padding="10dp"
+            android:backgroundTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editFullName" />
+
+        <TextView
+            android:id="@+id/editLocation"
+            android:text="@string/location"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:layout_width="0dp"
+            android:background="@drawable/custom_input"
+            android:backgroundTint="@color/white"
+            android:padding="10dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/editEmail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/openMap"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginVertical="20dp"
+            android:paddingHorizontal="15dp" />
+
+        <ImageButton
+            android:id="@+id/openMap"
+            android:src="@drawable/ic_location"
+            android:backgroundTint="@color/primary_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/editLocation"
+            app:layout_constraintBottom_toBottomOf="@id/editLocation"
+            app:layout_constraintStart_toEndOf="@id/editLocation"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="50dp"/>
+
+        <EditText
+            android:id="@+id/editEducation"
+            android:hint="@string/education_change"
+            android:textSize="15sp"
+            android:background="@drawable/custom_input"
+            android:backgroundTint="@color/white"
+            android:padding="10dp"
+            android:scrollbars="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
+            android:layout_marginHorizontal="50dp"
+            android:paddingHorizontal="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editLocation"/>
+
+        <EditText
+            android:id="@+id/editSubjects"
+            android:hint="@string/subjects_change"
+            android:maxLines="5"
+            android:textSize="15sp"
+            android:scrollbars="vertical"
+            android:background="@drawable/custom_input"
+            android:backgroundTint="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
+            android:layout_marginHorizontal="50dp"
+            android:paddingHorizontal="15dp"
+            android:padding="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editEducation"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/checkText"
+            android:text="@string/teaching_for"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/editSubjects"
+            app:layout_constraintStart_toStartOf="@id/editEducation"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:visibility="gone"/>
+
+        <CheckBox
+            android:id="@+id/osnovna"
+            android:text="@string/osnovna"
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/checkText"
+            app:layout_constraintBottom_toBottomOf="@id/checkText"
+            app:layout_constraintStart_toEndOf="@id/checkText"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="30dp"
+            android:theme="@style/CheckBoxTheme"
+            android:visibility="gone"/>
+
+        <CheckBox
+            android:id="@+id/srednja"
+            android:text="@string/srednja"
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/osnovna"
+            app:layout_constraintStart_toStartOf="@id/osnovna"
+            android:theme="@style/CheckBoxTheme"
+            android:visibility="gone"/>
+
+        <CheckBox
+            android:id="@+id/fakultet"
+            android:text="@string/fakultet"
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/srednja"
+            app:layout_constraintStart_toStartOf="@id/srednja"
+            android:theme="@style/CheckBoxTheme"
+            android:visibility="gone"/>
+
+        <EditText
+            android:id="@+id/editPrice"
+            android:hint="@string/price_change"
+            android:background="@drawable/custom_input"
+            android:backgroundTint="@color/white"
+            android:padding="10dp"
+            android:textSize="15sp"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/fakultet"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginVertical="20dp"
+            android:layout_marginHorizontal="50dp"
+            android:paddingHorizontal="15dp"
+            android:visibility="gone"/>
+
+        <Switch
+            android:id="@+id/availableChange"
+            android:text="@string/available_change"
+            android:background="@drawable/custom_input"
+            android:backgroundTint="@color/white"
+            android:padding="10dp"
+            android:checked="true"
+            android:textSize="15sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/editPrice"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginVertical="20dp"
+            android:layout_marginHorizontal="50dp"
+            android:paddingHorizontal="15dp"
+            tools:ignore="UseSwitchCompatOrMaterialXml"
+            android:visibility="gone"
+            android:theme="@style/AvailableSwitch"/>
+
+        <Button
+            android:id="@+id/deactivateUserButton"
+            android:text="@string/deactivate_user_button"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/settingsHeader"
+            app:layout_constraintEnd_toEndOf="@id/editFullName"
+            android:layout_marginBottom="50dp"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/delete_button"
+            android:textAllCaps="false"
+            android:background="@drawable/custom_rounded_button"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

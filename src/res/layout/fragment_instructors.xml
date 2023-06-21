@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/light_gray"
+    tools:context=".Fragments.InstructorsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/filteringContainer"
+        android:background="@color/primary_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/fastSearch"
+            android:hint="@string/fast_search"
+            android:background="@drawable/custom_input"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:paddingHorizontal="15dp"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/filterLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/fastSearch"
+            app:layout_constraintStart_toStartOf="parent"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/filterBySubject"
+                android:hint="@string/filter_by_subject"
+                android:background="@drawable/custom_input"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:paddingStart="15dp"/>
+
+            <CheckBox
+                android:id="@+id/filterByAvailable"
+                android:text="@string/available_checkbox"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/filterByRating"
+                app:layout_constraintStart_toStartOf="@id/filterByCity"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:theme="@style/CheckBoxTheme"/>
+
+            <EditText
+                android:id="@+id/filterByCity"
+                android:hint="Grad"
+                android:background="@drawable/custom_input"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/filterBySubject"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:paddingHorizontal="15dp"
+                android:layout_marginTop="10dp"/>
+
+            <Spinner
+                android:id="@+id/filterByRating"
+                style="@style/Widget.AppCompat.Light.Spinner.DropDown.ActionBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/filterByCity"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/filterByOrder"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:spinnerMode="dropdown"
+                android:layout_marginTop="20dp"/>
+
+            <Spinner
+                android:id="@+id/filterByOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/filterByRating"
+                app:layout_constraintStart_toEndOf="@id/filterByRating"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:spinnerMode="dropdown"/>
+
+            <Button
+                android:id="@+id/filterButton"
+                android:text="@string/filter_button"
+                android:textColor="@color/primary_color"
+                android:backgroundTint="@color/light_gray"
+                android:textAllCaps="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/filterByAvailable"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="20dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageButton
+            android:id="@+id/detailFilterOpenButton"
+            android:src="@drawable/ic_open_filters"
+            android:background="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/filterLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageButton
+            android:id="@+id/detailFilterCloseButton"
+            android:src="@drawable/ic_close_filters"
+            android:background="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/filterLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:backgroundTint="@color/delete_button"
+            android:visibility="gone"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/listContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/filteringContainer"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@color/light_gray">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
