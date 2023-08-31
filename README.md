@@ -1,4 +1,6 @@
 ## Instruktor
+[![en](https://img.shields.io/badge/lang-en-green.svg)](https://github.com/a-lorena/Instructor/blob/main/README.en.md)
+
 Android aplikacija za potražnju i ponudu instrukcija
 
 
